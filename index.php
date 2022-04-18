@@ -12,6 +12,9 @@ and open the template in the editor.
     <body>
         <?php
         // put your code here
+        include './models/CustomerManager.php';
+        $a = new CustomerManager();
+        $a->getAll();
         ?>
     </body>
 </html>
