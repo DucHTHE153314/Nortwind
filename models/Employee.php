@@ -14,28 +14,38 @@
 class Employee {
 
     //put your code here
-    private $id;
+    private $employeeId;
     private $firstName;
     private $lastName;
-    private $company;
-    private $emailAddress;
-    private $homePhone;
-    private $jobTitle;
+    private $title;
+    private $titleOfCourtesy;
+    private $birthDate;
     private $address;
+    private $city;
+    private $region;
+    private $postalCode;
+    private $country;
+    private $phone;
+    private $email;
 
-    function __construct($id, $firstName, $lastName, $company, $emailAddress, $homePhone, $jobTitle, $address) {
-        $this->id = $id;
+    function __construct($employeeId, $firstName, $lastName, $title, $titleOfCourtesy, $birthDate, $address, $city, $region, $postalCode, $country, $phone, $email) {
+        $this->employeeId = $employeeId;
         $this->firstName = $firstName;
         $this->lastName = $lastName;
-        $this->company = $company;
-        $this->emailAddress = $emailAddress;
-        $this->homePhone = $homePhone;
-        $this->jobTitle = $jobTitle;
+        $this->title = $title;
+        $this->titleOfCourtesy = $titleOfCourtesy;
+        $this->birthDate = $birthDate;
         $this->address = $address;
+        $this->city = $city;
+        $this->region = $region;
+        $this->postalCode = $postalCode;
+        $this->country = $country;
+        $this->phone = $phone;
+        $this->email = $email;
     }
 
-    function getId() {
-        return $this->id;
+    function getEmployeeId() {
+        return $this->employeeId;
     }
 
     function getFirstName() {
@@ -46,28 +56,48 @@ class Employee {
         return $this->lastName;
     }
 
-    function getCompany() {
-        return $this->company;
+    function getTitle() {
+        return $this->title;
     }
 
-    function getEmailAddress() {
-        return $this->emailAddress;
+    function getTitleOfCourtesy() {
+        return $this->titleOfCourtesy;
     }
 
-    function getHomePhone() {
-        return $this->homePhone;
-    }
-
-    function getJobTitle() {
-        return $this->jobTitle;
+    function getBirthDate() {
+        return $this->birthDate;
     }
 
     function getAddress() {
         return $this->address;
     }
 
-    function setId($id) {
-        $this->id = $id;
+    function getCity() {
+        return $this->city;
+    }
+
+    function getRegion() {
+        return $this->region;
+    }
+
+    function getPostalCode() {
+        return $this->postalCode;
+    }
+
+    function getCountry() {
+        return $this->country;
+    }
+
+    function getPhone() {
+        return $this->phone;
+    }
+
+    function getEmail() {
+        return $this->email;
+    }
+
+    function setEmployeeId($employeeId) {
+        $this->employeeId = $employeeId;
     }
 
     function setFirstName($firstName) {
@@ -78,24 +108,44 @@ class Employee {
         $this->lastName = $lastName;
     }
 
-    function setCompany($company) {
-        $this->company = $company;
+    function setTitle($title) {
+        $this->title = $title;
     }
 
-    function setEmailAddress($emailAddress) {
-        $this->emailAddress = $emailAddress;
+    function setTitleOfCourtesy($titleOfCourtesy) {
+        $this->titleOfCourtesy = $titleOfCourtesy;
     }
 
-    function setHomePhone($homePhone) {
-        $this->homePhone = $homePhone;
-    }
-
-    function setJobTitle($jobTitle) {
-        $this->jobTitle = $jobTitle;
+    function setBirthDate($birthDate) {
+        $this->birthDate = $birthDate;
     }
 
     function setAddress($address) {
         $this->address = $address;
+    }
+
+    function setCity($city) {
+        $this->city = $city;
+    }
+
+    function setRegion($region) {
+        $this->region = $region;
+    }
+
+    function setPostalCode($postalCode) {
+        $this->postalCode = $postalCode;
+    }
+
+    function setCountry($country) {
+        $this->country = $country;
+    }
+
+    function setPhone($phone) {
+        $this->phone = $phone;
+    }
+
+    function setEmail($email) {
+        $this->email = $email;
     }
 
 }

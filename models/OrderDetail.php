@@ -1,5 +1,4 @@
 <?php
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -14,7 +13,7 @@
 class OrderDetail {
 
     //put your code here
-    private $id;
+    private $orderDetailId ;
     private $orderId;
     private $productId;
     private $quantity;

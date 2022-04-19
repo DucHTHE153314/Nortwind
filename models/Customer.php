@@ -14,88 +14,137 @@
 class Customer {
 
     //put your code here
-    private $id;
-    private $firstName;
-    private $lastName;
-    private $company;
-    private $emailAddress;
-    private $homePhone;
-    private $jobTitle;
+    private $custId;
+    private $contactName;
+    private $companyName;
+    private $contactTitle;
+    private $country;
     private $address;
+    private $city;
+    private $email;
+    private $fax;
+    private $mobile;
+    private $phone;
+    private $postalCode;
+    private $region;
 
-    function __construct($id, $firstName, $lastName, $company, $emailAddress, $homePhone, $jobTitle, $address) {
-        $this->id = $id;
-        $this->firstName = $firstName;
-        $this->lastName = $lastName;
-        $this->company = $company;
-        $this->emailAddress = $emailAddress;
-        $this->homePhone = $homePhone;
-        $this->jobTitle = $jobTitle;
+    function __construct($custId, $contactName, $companyName, $contactTitle, $country, $address, $city, $email, $fax, $mobile, $phone, $postalCode, $region) {
+        $this->custId = $custId;
+        $this->contactName = $contactName;
+        $this->companyName = $companyName;
+        $this->contactTitle = $contactTitle;
+        $this->country = $country;
         $this->address = $address;
+        $this->city = $city;
+        $this->email = $email;
+        $this->fax = $fax;
+        $this->mobile = $mobile;
+        $this->phone = $phone;
+        $this->postalCode = $postalCode;
+        $this->region = $region;
+    }
+    function getCustId() {
+        return $this->custId;
     }
 
-    function getId() {
-        return $this->id;
+    function getContactName() {
+        return $this->contactName;
     }
 
-    function getFirstName() {
-        return $this->firstName;
+    function getCompanyName() {
+        return $this->companyName;
     }
 
-    function getLastName() {
-        return $this->lastName;
+    function getContactTitle() {
+        return $this->contactTitle;
     }
 
-    function getCompany() {
-        return $this->company;
-    }
-
-    function getEmailAddress() {
-        return $this->emailAddress;
-    }
-
-    function getHomePhone() {
-        return $this->homePhone;
-    }
-
-    function getJobTitle() {
-        return $this->jobTitle;
+    function getCountry() {
+        return $this->country;
     }
 
     function getAddress() {
         return $this->address;
     }
 
-    function setId($id) {
-        $this->id = $id;
+    function getCity() {
+        return $this->city;
     }
 
-    function setFirstName($firstName) {
-        $this->firstName = $firstName;
+    function getEmail() {
+        return $this->email;
     }
 
-    function setLastName($lastName) {
-        $this->lastName = $lastName;
+    function getFax() {
+        return $this->fax;
     }
 
-    function setCompany($company) {
-        $this->company = $company;
+    function getMobile() {
+        return $this->mobile;
     }
 
-    function setEmailAddress($emailAddress) {
-        $this->emailAddress = $emailAddress;
+    function getPhone() {
+        return $this->phone;
     }
 
-    function setHomePhone($homePhone) {
-        $this->homePhone = $homePhone;
+    function getPostalCode() {
+        return $this->postalCode;
     }
 
-    function setJobTitle($jobTitle) {
-        $this->jobTitle = $jobTitle;
+    function getRegion() {
+        return $this->region;
+    }
+
+    function setCustId($custId) {
+        $this->custId = $custId;
+    }
+
+    function setContactName($contactName) {
+        $this->contactName = $contactName;
+    }
+
+    function setCompanyName($companyName) {
+        $this->companyName = $companyName;
+    }
+
+    function setContactTitle($contactTitle) {
+        $this->contactTitle = $contactTitle;
+    }
+
+    function setCountry($country) {
+        $this->country = $country;
     }
 
     function setAddress($address) {
         $this->address = $address;
+    }
+
+    function setCity($city) {
+        $this->city = $city;
+    }
+
+    function setEmail($email) {
+        $this->email = $email;
+    }
+
+    function setFax($fax) {
+        $this->fax = $fax;
+    }
+
+    function setMobile($mobile) {
+        $this->mobile = $mobile;
+    }
+
+    function setPhone($phone) {
+        $this->phone = $phone;
+    }
+
+    function setPostalCode($postalCode) {
+        $this->postalCode = $postalCode;
+    }
+
+    function setRegion($region) {
+        $this->region = $region;
     }
 
 }

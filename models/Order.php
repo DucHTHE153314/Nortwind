@@ -14,36 +14,40 @@
 class Order {
 
     //put your code here
-    private $id;
-    private $customerId;
+    private $orderId;
+    private $custId;
     private $employeeId;
     private $orderDate;
+    private $requiredDate;
     private $shippedDate;
     private $shipperId;
-    private $shippingFee;
+    private $freight;
     private $shipAddress;
     private $shipName;
-    private $shipCountryRegion;
+    private $shipCity;
+    private $shipCountry;
 
-    function __construct($id, $customerId, $employeeId, $orderDate, $shippedDate, $shipperId, $shippingFee, $shipAddress, $shipName, $shipCountryRegion) {
-        $this->id = $id;
-        $this->customerId = $customerId;
+    function __construct($orderId, $custId, $employeeId, $orderDate, $requiredDate, $shippedDate, $shipperId, $freight, $shipAddress, $shipName, $shipCity, $shipCountry) {
+        $this->orderId = $orderId;
+        $this->custId = $custId;
         $this->employeeId = $employeeId;
         $this->orderDate = $orderDate;
+        $this->requiredDate = $requiredDate;
         $this->shippedDate = $shippedDate;
         $this->shipperId = $shipperId;
-        $this->shippingFee = $shippingFee;
+        $this->freight = $freight;
         $this->shipAddress = $shipAddress;
         $this->shipName = $shipName;
-        $this->shipCountryRegion = $shipCountryRegion;
+        $this->shipCity = $shipCity;
+        $this->shipCountry = $shipCountry;
     }
 
-    function getId() {
-        return $this->id;
+    function getOrderId() {
+        return $this->orderId;
     }
 
-    function getCustomerId() {
-        return $this->customerId;
+    function getCustId() {
+        return $this->custId;
     }
 
     function getEmployeeId() {
@@ -54,6 +58,10 @@ class Order {
         return $this->orderDate;
     }
 
+    function getRequiredDate() {
+        return $this->requiredDate;
+    }
+
     function getShippedDate() {
         return $this->shippedDate;
     }
@@ -62,8 +70,8 @@ class Order {
         return $this->shipperId;
     }
 
-    function getShippingFee() {
-        return $this->shippingFee;
+    function getFreight() {
+        return $this->freight;
     }
 
     function getShipAddress() {
@@ -74,16 +82,20 @@ class Order {
         return $this->shipName;
     }
 
-    function getShipCountryRegion() {
-        return $this->shipCountryRegion;
+    function getShipCity() {
+        return $this->shipCity;
     }
 
-    function setId($id) {
-        $this->id = $id;
+    function getShipCountry() {
+        return $this->shipCountry;
     }
 
-    function setCustomerId($customerId) {
-        $this->customerId = $customerId;
+    function setOrderId($orderId) {
+        $this->orderId = $orderId;
+    }
+
+    function setCustId($custId) {
+        $this->custId = $custId;
     }
 
     function setEmployeeId($employeeId) {
@@ -94,6 +106,10 @@ class Order {
         $this->orderDate = $orderDate;
     }
 
+    function setRequiredDate($requiredDate) {
+        $this->requiredDate = $requiredDate;
+    }
+
     function setShippedDate($shippedDate) {
         $this->shippedDate = $shippedDate;
     }
@@ -102,8 +118,8 @@ class Order {
         $this->shipperId = $shipperId;
     }
 
-    function setShippingFee($shippingFee) {
-        $this->shippingFee = $shippingFee;
+    function setFreight($freight) {
+        $this->freight = $freight;
     }
 
     function setShipAddress($shipAddress) {
@@ -114,8 +130,12 @@ class Order {
         $this->shipName = $shipName;
     }
 
-    function setShipCountryRegion($shipCountryRegion) {
-        $this->shipCountryRegion = $shipCountryRegion;
+    function setShipCity($shipCity) {
+        $this->shipCity = $shipCity;
+    }
+
+    function setShipCountry($shipCountry) {
+        $this->shipCountry = $shipCountry;
     }
 
 }

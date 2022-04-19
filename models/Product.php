@@ -14,88 +14,88 @@
 class Product {
 
     //put your code here
-    private $id;
-    private $productCode;
+    private $productId;
+    private $supplierId;
     private $productName;
-    private $category;
+    private $categoryId;
     private $quantityPerUnit;
-    private $standardCost;
-    private $description;
-    private $supplierIds;
+    private $unitPrice;
+    private $unitsInStock;
+    private $unitsOnOrder;
 
-    function __construct($id, $productCode, $productName, $category, $quantityPerUnit, $standardCost, $description, $supplierIds) {
-        $this->id = $id;
-        $this->productCode = $productCode;
+    function __construct($productId, $supplierId, $productName, $categoryId, $quantityPerUnit, $unitPrice, $unitsInStock, $unitsOnOrder) {
+        $this->productId = $productId;
+        $this->supplierId = $supplierId;
         $this->productName = $productName;
-        $this->category = $category;
+        $this->categoryId = $categoryId;
         $this->quantityPerUnit = $quantityPerUnit;
-        $this->standardCost = $standardCost;
-        $this->description = $description;
-        $this->supplierIds = $supplierIds;
+        $this->unitPrice = $unitPrice;
+        $this->unitsInStock = $unitsInStock;
+        $this->unitsOnOrder = $unitsOnOrder;
     }
 
-    function getId() {
-        return $this->id;
+    function getProductId() {
+        return $this->productId;
     }
 
-    function getProductCode() {
-        return $this->productCode;
+    function getSupplierId() {
+        return $this->supplierId;
     }
 
     function getProductName() {
         return $this->productName;
     }
 
-    function getCategory() {
-        return $this->category;
+    function getCategoryId() {
+        return $this->categoryId;
     }
 
     function getQuantityPerUnit() {
         return $this->quantityPerUnit;
     }
 
-    function getStandardCost() {
-        return $this->standardCost;
+    function getUnitPrice() {
+        return $this->unitPrice;
     }
 
-    function getDescription() {
-        return $this->description;
+    function getUnitsInStock() {
+        return $this->unitsInStock;
     }
 
-    function getSupplierIds() {
-        return $this->supplierIds;
+    function getUnitsOnOrder() {
+        return $this->unitsOnOrder;
     }
 
-    function setId($id) {
-        $this->id = $id;
+    function setProductId($productId) {
+        $this->productId = $productId;
     }
 
-    function setProductCode($productCode) {
-        $this->productCode = $productCode;
+    function setSupplierId($supplierId) {
+        $this->supplierId = $supplierId;
     }
 
     function setProductName($productName) {
         $this->productName = $productName;
     }
 
-    function setCategory($category) {
-        $this->category = $category;
+    function setCategoryId($categoryId) {
+        $this->categoryId = $categoryId;
     }
 
     function setQuantityPerUnit($quantityPerUnit) {
         $this->quantityPerUnit = $quantityPerUnit;
     }
 
-    function setStandardCost($standardCost) {
-        $this->standardCost = $standardCost;
+    function setUnitPrice($unitPrice) {
+        $this->unitPrice = $unitPrice;
     }
 
-    function setDescription($description) {
-        $this->description = $description;
+    function setUnitsInStock($unitsInStock) {
+        $this->unitsInStock = $unitsInStock;
     }
 
-    function setSupplierIds($supplierIds) {
-        $this->supplierIds = $supplierIds;
+    function setUnitsOnOrder($unitsOnOrder) {
+        $this->unitsOnOrder = $unitsOnOrder;
     }
 
 }

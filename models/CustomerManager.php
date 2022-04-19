@@ -1,6 +1,6 @@
 <?php
 
-include './Customer.php';
+include 'Customer.php';
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -38,22 +38,28 @@ class CustomerManager {
         // Create connection
         $conn = mysqli_connect($servername, $username, $password, $dbname);
         // Check connection
-        if (!$conn)
+        if (!$conn) {
             die("Connection failed: " . mysqli_connect_error());
+        }
         $sql = "SELECT * FROM Customer";
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) > 0) {
             // output data of each row
             while ($row = mysqli_fetch_assoc($result)) {
-                $id = $row["id"];
-                $firstName = $row["first_name"];
-                $lastName = $row["last_name"];
-                $company = $row["company"];
-                $emailAddress = $row["email_address"];
-                $homePhone = $row["home_phone"];
-                $jobTitle = $row["Job_title"];
+                $custId = $row["custId"];
+                $contactName = $row["contactName"];
+                $companyName = $row["companyName"];
+                $contactTitle = $row["contactTitle"];
+                $country = $row["country"];
                 $address = $row["address"];
-                $this->data[] = new Customer($id, $firstName, $lastName, $company, $emailAddress, $homePhone, $jobTitle, $address);
+                $city = $row["city"];
+                $email = $row["email"];
+                $fax = $row["fax"];
+                $mobile = $row["mobile"];
+                $phone = $row["phone"];
+                $postalCode = $row["postalCode"];
+                $region = $row["region"];
+                $this->data[] = new Customer($custId, $contactName, $companyName, $contactTitle, $country, $address, $city, $email, $fax, $mobile, $phone, $postalCode, $region);
             }
         } else {
             echo "0 results";
